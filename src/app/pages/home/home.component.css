@@ -1,0 +1,19 @@
+ .my-container {
+    width: 400px;
+    height: 300px;
+}
+.min-h-full max-w-7x1 mx-auto border-x {
+    display: flex;
+    height: 1000%;
+    align-items: center;
+    justify-content: center;
+}
+.p-6 {
+    height: 600px;
+    background-color: hsl(0, 9%, 93%);
+}  
+
+.p-7 {
+   
+    background-color: #ff9248;
+}  
