@@ -7,8 +7,42 @@
     
     <mat-drawer-content class="p-6">
         <app-products-hearder (columnsCountChange)="onColumnsCountChange($event)"></app-products-hearder>
-       {{cols}}
-       {{category}}
+       <!-- {{cols}}
+       {{category}} -->
+       <mat-grid-list gutterSize="16"
+       [cols]="cols"
+       [rowHeight]="rowHeight"
+       >
+       <mat-grid-tile>
+        <!-- (addToCart)="onAddToCart($event)"  -->
+        <app-product-box 
+         (addToCart)="onAddToCart($event)"
+         class="w-full"
+         [fullWidthMode]="cols === 1"></app-product-box>
+       </mat-grid-tile> 
+
+       <!-- <mat-grid-tile>
+        <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
+       </mat-grid-tile> 
+
+       <mat-grid-tile>
+        <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
+       </mat-grid-tile> 
+
+       <mat-grid-tile>
+        <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
+       </mat-grid-tile> 
+
+       <mat-grid-tile>
+        <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
+       </mat-grid-tile> 
+
+       <mat-grid-tile>
+        <app-product-box class="w-full" [fullWidthMode]="cols === 1"></app-product-box>
+       </mat-grid-tile> 
+        -->
+       </mat-grid-list>
+       
     </mat-drawer-content>
 
 </mat-drawer-container>
